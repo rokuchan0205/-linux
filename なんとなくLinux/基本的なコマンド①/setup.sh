@@ -1,11 +1,10 @@
-bash
-
 #!/bin/bash
 
-# 既存の異常なファイルを削除
-rm -f example.txt* test.txt* test_dir* .hidden*
+# クリーンアップ（念のため）
+find /root -type f -name $'*\r' -delete
+find /root -type d -name $'*\r' -exec rm -rf {} \;
 
-# ls コマンド用（step1）
+# ls, cp, パーミッション用（step1, step3, step4）
 touch test.txt
 touch example.txt
 mkdir test_dir
