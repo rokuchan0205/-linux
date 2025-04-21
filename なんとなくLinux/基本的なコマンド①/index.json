@@ -1,14 +1,23 @@
 {
-  "title": "0.killercocda入門",
+  "title": "基本的なコマンド①",
   "details": {
     "intro": {
-      "text": "intro.md"
-      "background": "setup.sh"
+      "text": "intro.md",
+      "background": "startup.sh"
     },
     "steps": [
       {
         "text": "step1.md"
       },
+      {
+        "text": "step2.md"
+      },
+      {
+        "text": "step3.md"
+      },
+      {
+        "text": "step4.md"
+      }
     ],
     "finish": {
       "text": "finish.md"
@@ -17,5 +26,3 @@
   "backend": {
     "imageid": "ubuntu"
   }
-}
-
