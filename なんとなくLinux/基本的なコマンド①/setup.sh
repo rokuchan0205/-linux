@@ -1,14 +1,11 @@
 #!/bin/bash
 
-# 通常のファイルを作成
+# 既存の異常なファイルを削除
+rm -f example.txt* test.txt* test_dir* .hidden*
+
+# ls コマンド用（step1）
 touch test.txt
 touch example.txt
-
-# ディレクトリを作成
 mkdir test_dir
-
-# 隠しファイルを作成（ls -a 用）
-touch .hidden
-
-# ディレクトリ内にサンプルファイルを追加
 touch test_dir/sample.txt
+touch .hidden
