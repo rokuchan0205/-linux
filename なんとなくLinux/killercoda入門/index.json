@@ -1,5 +1,5 @@
 {
-  "title": "0.killercoda入門",
+  "title": "0.Killercoda入門",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -17,3 +17,4 @@
   "backend": {
     "imageid": "ubuntu"
   }
+}
