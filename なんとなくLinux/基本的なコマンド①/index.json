@@ -3,7 +3,7 @@
   "details": {
     "intro": {
       "text": "intro.md",
-      "background": "startup.sh"
+      "background": "setup.sh"
     },
     "steps": [
       {
