@@ -1,14 +1,14 @@
 {
-  "title": "0.killercocda入門",
+  "title": "0.killercoda入門",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
       "background": "setup.sh"
     },
     "steps": [
       {
         "text": "step1.md"
-      },
+      }
     ],
     "finish": {
       "text": "finish.md"
@@ -17,5 +17,3 @@
   "backend": {
     "imageid": "ubuntu"
   }
-}
-
