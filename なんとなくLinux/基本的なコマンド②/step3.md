@@ -1,64 +1,68 @@
-# Step 3: ファイルをコピーしよう（cp コマンド）
+# Step 3: 新しいディレクトリを作ろう（mkdir コマンド）
 
-Linuxの **cp** コマンドを使って、ファイルをコピーする方法を学びましょう。  
-ファイルやディレクトリを複製する基本操作を練習します。
-
----
-
-## cp コマンドとは？
-
-`cp`（Copy）は、ファイルやディレクトリを**コピー**するコマンドです。  
-コピー元とコピー先を指定して、元のファイルを複製できます。
+Linuxでは、ディレクトリを作成してファイルを整理します。  
+**mkdir** コマンドを使って、新しいディレクトリを作成する方法を学びましょう。
 
 ---
 
-## 課題①：基本のファイルコピー
+## mkdir コマンドとは？
 
-`test.txt` を `test_copy.txt` にコピーしてみましょう。
+`mkdir`（Make Directory）は、新しい**ディレクトリを作成**するコマンドです。  
+作業用のディレクトリを簡単に作れます。
+
+---
+
+## 課題①：基本のディレクトリ作成
+
+`/root` 直下に `new_dir` というディレクトリを作成してみましょう。
 
 ```bash
-cp test.txt test_copy.txt
+mkdir /root/new_dir
+ls /root
 ```{{exec}}
 
-確認：`ls` を実行し、`test_copy.txt` が作成されたことをチェック。
+確認：`new_dir` が作成されたことをチェック。  
+プロンプトは `Ubuntu:/root$` のままです。
 
 ---
 
-## 課題②：ディレクトリへのコピー
+## 課題②：ディレクトリ内にディレクトリ作成
 
-`example.txt` を `test_dir` ディレクトリ内にコピーしてみましょう。
+`/root/test_dir` 内に `sub_dir` というディレクトリを作成してみましょう。
 
 ```bash
-cp example.txt test_dir/example_copy.txt
+mkdir /root/test_dir/sub_dir
+ls /root/test_dir
 ```{{exec}}
 
-確認：`ls test_dir` を実行し、`example_copy.txt` が `test_dir` 内にできたことをチェック。
+確認：`sub_dir` が作成され、`ls` で `sample.txt sub_dir` が表示されることをチェック。
 
 ---
 
-## 課題③：ディレクトリ全体のコピー
+## 課題③：作成後に移動
 
-ディレクトリを丸ごとコピーするには `-r` オプションを使います。  
-`test_dir` を `test_dir_backup` にコピーしてみましょう。
+作成した `/root/new_dir` に移動して、現在位置を確認してみましょう。
 
 ```bash
-cp -r test_dir test_dir_backup
+cd /root/new_dir
+pwd
 ```{{exec}}
 
-確認：`ls` で `test_dir_backup` ができ、`ls test_dir_backup` で中身（`sample.txt`, `example_copy.txt`）を確認。
+確認：`/root/new_dir` に移動したことをチェック。  
+プロンプトが `Ubuntu:/root/new_dir$` のように変わります。
 
 ---
 
-## cp コマンドの書式
+## mkdir コマンドの書式
 
 ```bash
-cp [オプション] コピー元 コピー先
+mkdir [ディレクトリ名]
 
-よく使うオプション
--r - ディレクトリを再帰的にコピー（ディレクトリ全体をコピー）
+補足
+ディレクトリ名にスペースを含む場合は、mkdir "my dir" のように引用符を使います。
 
--v - コピーの詳細を表示（Verbose）
+既に存在するディレクトリ名を指定すると、エラーが出ます。
 
 次へ進もう
-cp コマンドの基本を理解できたら、次のステップへ進みましょう！
+mkdir コマンドを理解できたら、次のステップへ進みましょう！
 右下の Next ボタンを押してください。
