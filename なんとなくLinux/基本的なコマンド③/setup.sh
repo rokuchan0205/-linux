@@ -1,21 +1,12 @@
 #!/bin/bash
-# ls, cp, パーミッション, mv 用（step1～step5）
-touch test.txt
-touch example.txt
-mkdir test_dir
-touch test_dir/sample.txt
-touch .hidden
-echo "secret" > .hidden
-
-# 検証用ファイル（異なるパーミッションと所有者）
-touch perm_test.txt
-touch perm_test2.txt
-
-# ユーザー作成（testuser）
-useradd -m testuser 2>/dev/null || true
-
-# 所有者とパーミッション変更
-chown testuser:testuser perm_test.txt
-chmod 640 perm_test.txt  # 所有者:rw, グループ:r, その他:---
-chown root:root perm_test2.txt
-chmod 644 perm_test2.txt  # 所有者:rw, グループ:rw, その他:r
+# find, grep, ワイルドカード用
+mkdir -p /root/docs/text
+mkdir -p /root/docs/images
+touch /root/docs/file1.txt
+echo "This is a text file." > /root/docs/file1.txt
+touch /root/docs/file2.txt
+echo "Another text file with keyword." > /root/docs/file2.txt
+touch /root/docs/images/image1.png
+touch /root/docs/images/image2.jpg
+touch /root/docs/text/note.txt
+echo "Note: This is for grep practice." > /root/docs/text/note.txt
