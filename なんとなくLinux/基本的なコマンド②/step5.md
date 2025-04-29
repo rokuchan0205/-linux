@@ -36,6 +36,7 @@ cat /root/test_dir/short1.txt
 確認：以下の内容が表示されることをチェック。
 
 First line.
+
 Second line.
 
 ---
