@@ -16,3 +16,9 @@ touch /root/test_dir/reference.txt
 for i in $(seq 1 100); do
   echo "Line $i: This is a reference line for more and less." >> /root/test_dir/reference.txt
 done
+
+# cat 用：短いファイル
+touch /root/test_dir/short1.txt
+touch /root/test_dir/short2.txt
+echo -e "First line.\nSecond line." > /root/test_dir/short1.txt
+echo -e "Third line.\nFourth line." > /root/test_dir/short2.txt
