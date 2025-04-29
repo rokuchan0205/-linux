@@ -23,7 +23,7 @@ grep "keyword" /root/docs/large_file.txt
 確認：以下の行が表示されることをチェック。  
 
 /root/docs/large_file.txt:Line 50: Special keyword here!
-/root/docs/large_file.txt:Line 75: Another keyword match.
+/root/docs/large_file.txt:Line 75: Another text match.
 
 大きなファイルでも、grep なら該当行だけを素早く見つけられます。  
 プロンプトは `Ubuntu:/root$` です。
@@ -42,11 +42,9 @@ grep "text" /root/docs/*.txt
 
 /root/docs/file1.txt:This is a text file.
 /root/docs/file2.txt:Another text file with keyword.
-/root/docs/large_file.txt:Line 1: This is a sample line.
-（中略）
-/root/docs/large_file.txt:Line 100: This is a sample line.
+/root/docs/large_file.txt:Line 75: Another text match.
 
-`large_file.txt` から該当する行が多数表示されます。
+100行の `large_file.txt` から該当する行（1行）だけが表示され、grep の効率性が分かります。
 
 ---
 
@@ -58,8 +56,13 @@ grep "text" /root/docs/*.txt
 grep -r "grep" /root/docs
 ```{{exec}}
 
-確認：`/root/docs/text/note.txt:Note: This is for grep practice.` が表示されることをチェック。  
-ディレクトリ内を自動で探索できるので便利です。
+確認：以下の行が表示されることをチェック。  
+
+/root/docs/text/note.txt:Note: This is for grep practice.
+/root/docs/logs/log1.txt:Log entry: grep is useful for searching.
+/root/docs/backups/backup.txt:Backup file: Using grep for backup logs.
+
+複数のサブディレクトリを自動で探索し、該当する行だけを抽出できるので便利です。
 
 ---
 
@@ -78,4 +81,3 @@ grep [オプション] "検索文字列" [ファイル]
 次へ進もう
 grep とワイルドカードを理解できたら、次のステップへ進みましょう！
 右下の Next ボタンを押してください。
-
