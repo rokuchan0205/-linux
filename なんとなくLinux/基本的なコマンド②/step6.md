@@ -14,13 +14,14 @@
 
 ## 課題①：more コマンドで閲覧
 
-複数行のファイル `/root/test_dir/reference.txt` を `more` で閲覧してみましょう。
+約100行のファイル `/root/test_dir/reference.txt` を `more` で閲覧してみましょう。
 
 ```bash
 more /root/test_dir/reference.txt
 ```{{exec}}
 
-確認：内容が表示され、スペースキーで次のページへ、q で終了できることをチェック。  
+**ターミナルをクリック**してから操作してください。  
+確認：内容が表示され、**スペースキー**で次のページへ進み、**q** で終了できることをチェック。  
 プロンプトは `Ubuntu:/root/new_dir$` です。
 
 ---
@@ -33,19 +34,21 @@ more /root/test_dir/reference.txt
 less /root/test_dir/reference.txt
 ```{{exec}}
 
-確認：内容が表示され、上下矢印で移動、q で終了できることをチェック。
+**ターミナルをクリック**してから操作してください。  
+確認：内容が表示され、**上下矢印**で移動、**スペースキー**で次のページ、**b** で前のページ、**q** で終了できることをチェック。
 
 ---
 
-## 課題③：空のファイルの閲覧
+## 課題③：別のファイルの閲覧
 
-空のファイル `/root/new_dir/file1.txt` を `less` で閲覧してみましょう。
+setup.sh で作成済みの `/root/test_dir/sample.txt` を `less` で閲覧してみましょう。
 
 ```bash
-less file1.txt
+less /root/test_dir/sample.txt
 ```{{exec}}
 
-確認：何も表示されない（空ファイルのため）ことをチェック。q で終了します。
+**ターミナルをクリック**してから操作してください。  
+確認：`This is a sample file.` が表示されることをチェック。q で終了します。
 
 ---
 
