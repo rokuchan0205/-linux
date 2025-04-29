@@ -25,32 +25,44 @@ cat /root/test_dir/sample.txt
 
 ---
 
-## 課題②：複数行のファイル内容表示
+## 課題②：短いファイルの内容表示
 
-複数行のファイル `/root/test_dir/reference.txt` の内容を表示してみましょう。
+短いファイル `/root/test_dir/short1.txt` の内容を表示してみましょう。
 
 ```bash
-cat /root/test_dir/reference.txt
+cat /root/test_dir/short1.txt
 ```{{exec}}
 
 確認：以下の内容が表示されることをチェック。
 
-Line 1: This is a reference file.
-Line 2: It has multiple lines.
-Line 3: Use this for cat, more, or less.
-Line 4: Let's learn Linux commands!
+First line.
+Second line.
 
 ---
 
 ## 課題③：複数のファイルを結合表示
 
-`/root/test_dir` 内の `sample.txt` と `reference.txt` を結合して表示してみましょう。
+`/root/test_dir/short1.txt` と `/root/test_dir/short2.txt` を個別に表示し、結合してみましょう。
+
+まず、個別に表示します。
 
 ```bash
-cat /root/test_dir/sample.txt /root/test_dir/reference.txt
+cat /root/test_dir/short1.txt
+cat /root/test_dir/short2.txt
 ```{{exec}}
 
-確認：`sample.txt` の内容（1行）の後に `reference.txt` の内容（4行）が表示されることをチェック。
+次に、結合して表示します。
+
+```bash
+cat /root/test_dir/short1.txt /root/test_dir/short2.txt
+```{{exec}}
+
+確認：結合された内容が以下のように表示されることをチェック。
+
+First line.
+Second line.
+Third line.
+Fourth line.
 
 ---
 
@@ -67,4 +79,3 @@ cat [ファイル名]
 次へ進もう
 cat コマンドを理解できたら、次のステップへ進みましょう！
 右下の Next ボタンを押してください。
-
